@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <heading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="heading"
+                        name="./head"
+                        xtype="textfield"/>
+                    <text1
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="bullet 1"
+                        name="./text1"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured"/>
+                    </text1>
+                    <text2
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="bullet 2"
+                        name="./text2"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="* (asterisk)"/>
+                        </rtePlugins>
+                    </text2>
+                    <text3
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="bullet 3"
+                        name="./text3"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="* (asterisk)"/>
+                        </rtePlugins>
+                    </text3>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="imagepath"
+                        name="./image"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

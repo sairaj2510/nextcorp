@@ -1,0 +1,25 @@
+.clear
+{	
+	clear:both;
+    }
+.compare-similar
+    {
+    height: 24px;
+    line-height: 24px;
+    color: #d30c55;
+    font-weight: 300;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 14px;
+    float:right;
+    }
+.prod-top-section {
+    border-bottom: 1px solid #d4d0ca;
+    width:320px;
+}
+.richtext{
+float:left;
+}
+.select-prod{
+    float:left;
+}

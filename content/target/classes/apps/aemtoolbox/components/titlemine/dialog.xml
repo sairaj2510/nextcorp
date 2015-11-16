@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="500"
+    title="Carousel"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <carouselslides
+                jcr:primaryType="cq:Widget"
+                ddGroups="media"
+                requestSuffix=".img.png"
+                title="Carousel Slides"
+                hideImage="{Boolean}false"
+                maxSlides="5"
+                fileReferencePrefix="./slide$"
+                defaultSlideName="New Slide"
+                xtype="structuredmultilist">
+                <settings jcr:primaryType="cq:WidgetCollection">
+                    <featuretext
+                        jcr:primaryType="cq:Widget"
+                        anchor="94%"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Feature Text"
+                        defaultValue="Featured"
+                        itemId="featureText"
+                        name="featureText"
+                        xtype="textfield"/>
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        anchor="94%"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Title"
+                        itemId="title"
+                        name="jcr:title"
+                        useForDisplay="{Boolean}true"
+                        xtype="textfield"/>
+                    <summarytext
+                        jcr:primaryType="cq:Widget"
+                        anchor="94%"
+                        fieldLabel="Summary Text"
+                        itemId="summaryText"
+                        name="summaryText"
+                        xtype="textfield"/>
+                    <linktext
+                        jcr:primaryType="cq:Widget"
+                        anchor="94%"
+                        fieldLabel="Link Text"
+                        defaultValue="Read the study"
+                        itemId="linkText"
+                        name="linkText"
+                        xtype="textfield"/>
+                    <linklocation
+                        jcr:primaryType="cq:Widget"
+                        anchor="94%"
+                        emptyText="Start typing the name of a research page..."
+                        fieldLabel="Link Location"
+                        rootPath="/content/rwjf/en"
+                        itemId="linkLocation"
+                        name="linkLocation"
+                        xtype="autocompletefield"/>
+                </settings>
+                <cropConfig jcr:primaryType="nt:unstructured">
+                    <aspectRatios jcr:primaryType="cq:WidgetCollection">
+                        <aspect1
+                            jcr:primaryType="nt:unstructured"
+                            text="314 x 236"
+                            value="314,236"
+                            checked="true"/>
+                    </aspectRatios>
+                </cropConfig>
+            </carouselslides>
+        </items>
+    </items>
+</jcr:root>

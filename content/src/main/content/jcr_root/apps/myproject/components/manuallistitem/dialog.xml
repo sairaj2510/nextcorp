@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Main List Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <headline
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Headline"
+                        name="./headline"
+                        xtype="textfield"/>
+                    <previewtext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Preview Text"
+                        name="./previewtext"
+                        xtype="textarea"/>
+                    <contentlinklabel
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Content Link Label"
+                        name="./contentlinklabel"
+                        xtype="textfield"/>
+                    <contentlink
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Content Link"
+                        name="./contentlink"
+                        xtype="pathfield"/>
+                    <checkbox
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open Link in New Window"
+                        name="./checkbox"
+                        xtype="checkbox"/>
+                    <imagealttext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Alt Text"
+                        name="./imagealttext"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image"
+                        name="./image"
+                        xtype="pathfield"/>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>

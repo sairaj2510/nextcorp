@@ -1,0 +1,3 @@
+#base=js
+infinitecarousel.js
+    jquery.js

@@ -1,0 +1,16 @@
+.clear{
+    clear:both;
+    }
+.btn-login{
+	padding:7px 24px 7px;
+	margin-top:10px;
+	color:#000;
+	text-transform:uppercase;
+	background-color:#78dcff;
+	border-radius: 2px;
+	display:inline-block;
+	/*-webkit-box-shadow:inset 0px 0px 0px 1px #0d69c5;
+	-moz-box-shadow:inset    0px 0px 0px 1px #0d69c5;
+	box-shadow:inset         0px 0px 0px 1px #0d69c5;*/
+	border:solid 1px #78dcff;
+}

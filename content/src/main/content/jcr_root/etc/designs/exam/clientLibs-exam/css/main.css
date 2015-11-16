@@ -1,0 +1,24 @@
+.header
+{
+    text-align: center;
+background-color:grey;
+}
+.column{
+        width: 1000px;
+        text-align:center;
+    }
+.columns{
+        width: 200px;
+        float:left;
+    }
+.columnsy{
+        width: 800px;
+        float:left;
+    }
+.center{
+    padding-left: 10%;
+        padding-right: 10%;
+   }
+.clear{
+		clear:both;
+        }

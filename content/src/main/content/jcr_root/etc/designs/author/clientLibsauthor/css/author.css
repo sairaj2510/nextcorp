@@ -1,0 +1,57 @@
+.authors {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26.12943%;
+    padding-top: 3.222222222222222rem;
+}
+.author img
+{
+    display: block;
+    height: 50px;
+    -webkit-border-radius: 1.38889rem;
+    -moz-border-radius: 1.38889rem;
+    -ms-border-radius: 1.38889rem;
+    -o-border-radius: 1.38889rem;
+    border-radius: 1.38889rem;
+    margin-bottom: .5555555555555556rem;
+    margin-right: .5555555555555556rem;
+    width: 50px;
+}
+.name
+{
+    font-size: .77778rem;
+    line-height: .94444rem;
+    font-weight: 300;
+    display: block;
+}
+
+.name b {
+    color: #151515;
+    font-family: "Univers Condensed",Verdana,sans-serif;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.title {
+    margin-bottom: .5555555555555556rem;
+}
+.title {
+    font-size: .77778rem;
+    line-height: .94444rem;
+    font-weight: 300;
+    display: block;
+}
+span
+{
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.clear
+{
+clear:both;
+}
