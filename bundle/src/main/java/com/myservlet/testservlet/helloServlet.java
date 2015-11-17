@@ -17,6 +17,11 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 public class helloServlet extends SlingAllMethodsServlet
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/plain");

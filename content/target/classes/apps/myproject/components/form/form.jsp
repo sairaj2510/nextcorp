@@ -32,7 +32,6 @@
                 <td><span>DATE OF BIRTH</span></td>
                 <td>
                     <input type="date" name="bday">
-                    <input type="submit">
                 </td>
             </tr>
             <tr>
