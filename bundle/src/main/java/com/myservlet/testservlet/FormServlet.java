@@ -26,8 +26,7 @@ public class FormServlet extends SlingAllMethodsServlet
 
 	@Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
-	try
-	  {	
+	try{	
 		 String firstName = request.getParameter("First_Name");
 		 String lastName = request.getParameter("Last_Name");
 		 String birthDay = request.getParameter("bday");
@@ -59,13 +58,13 @@ public class FormServlet extends SlingAllMethodsServlet
 		 String courseBCom = request.getParameter("Course_BCom");
 		 String courseBSc = request.getParameter("Course_BSc");
 		 String courseBA = request.getParameter("Course_BA");
-	     String parentPath="/content/usergenerated/content";
-	     java.util.Date date= new java.util.Date();
-	     Timestamp time = new Timestamp(date.getTime());
+		 String parentPath="/content/usergenerated/content";
+		 java.util.Date date= new java.util.Date();
+		 Timestamp time = new Timestamp(date.getTime());
 		 String timeStamp = time.toString();
 		 timeStamp = timeStamp.replaceAll("\\p{P}", "");
-	     String pageNameString = firstName + "_" + lastName + "_" + timeStamp;
-	     pageNameString = pageNameString.replaceAll("\\s+", "").toLowerCase();
+		 String pageNameString = firstName + "_" + lastName + "_" + timeStamp;
+		 pageNameString = pageNameString.replaceAll("\\s+", "").toLowerCase();
 		 String pageName= pageNameString;
 		 String pageTitle="Sample form Page";
 		 String template="/apps/myproject/templates/formtemplate";
@@ -74,63 +73,62 @@ public class FormServlet extends SlingAllMethodsServlet
 		 Page prodPage = null;
 		 Session session = resourceResolver.adaptTo(Session.class);
 		 try {        
-		     if (session != null) {
-		 			  PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-		 			  prodPage = pageManager.create(parentPath, pageName, template, pageTitle);
-		 			  Node pageNode = prodPage.adaptTo(Node.class);
-		 			  Node jcrNode = null;
-		 			  if (prodPage.hasContent()) {
-		 				  jcrNode = prodPage.getContentResource().adaptTo(Node.class);
-		 			  } else {                   
-		 			  	  jcrNode = pageNode.addNode("jcr:content", "cq:PageContent");
-		 			  } 
-		 			  Node parNode = jcrNode.addNode("par");
-		 			  parNode.setProperty("sling:resourceType", "foundation/components/parsys");
-		 			  Node formNode = parNode.addNode("formdetails");
-		 			  formNode.setProperty("sling:resourceType", "myproject/components/formdetails");
-		 			  formNode.setProperty("FirstName", firstName);
-		 			  formNode.setProperty("LastName", lastName);
-		 			  formNode.setProperty("BirthDay", birthDay);
-		 			  formNode.setProperty("EmailId", emailId);
-		 			  formNode.setProperty("MobileNumber", mobileNumber);
-		 			  formNode.setProperty("Gender", gender);
-		 			  formNode.setProperty("Address", address);
-		 			  formNode.setProperty("City", city);
-		 			  formNode.setProperty("PinCode", pinCode);
-		 			  formNode.setProperty("State", state);
-		 			  formNode.setProperty("Country", country);
-		 			  formNode.setProperty("HobbyDrawing", hobbyDrawing);
-		 			  formNode.setProperty("HobbySinging", hobbySinging);
-		 			  formNode.setProperty("HobbyDancing", hobbyDancing);
-		 			  formNode.setProperty("HobbyCooking", hobbyCooking);
-		 			  formNode.setProperty("ClassXBoard", classXBoard);
-		 			  formNode.setProperty("ClassXPercentage", classXPercentage);
-		 			  formNode.setProperty("ClassXYrOfPassing", classXYrOfPassing);
-		 			  formNode.setProperty("ClassXIIBoard", classXIIBoard);
-		 			  formNode.setProperty("ClassXIIPercentage", classXIIPercentage);
-		 			  formNode.setProperty("ClassXIIYrOfPassing", classXIIYrOfPassing);
-		 			  formNode.setProperty("GraduationBoard", graduationBoard);
-		 			  formNode.setProperty("GraduationPercentage", graduationPercentage);
-		 			  formNode.setProperty("GraduationYrOfPassing", graduationYrOfPassing);
-		 			  formNode.setProperty("MastersBoard", mastersBoard);
-		 			  formNode.setProperty("MastersPercentage", mastersPercentage);
-		 			  formNode.setProperty("MastersYrOfPassing", mastersYrOfPassing);
-		 			  formNode.setProperty("Course_BCA", courseBCA);
-		 			  formNode.setProperty("Course_BCom", courseBCom);
-		 			  formNode.setProperty("Course_BSc", courseBSc);
-		 			  formNode.setProperty("Course_BA", courseBA);
-		 			  
-		 			  session.save();
-		 			  session.refresh(true);
-		     		  }
-	      	  } 
-		 	  catch (Exception e){
-	      			  throw e;
-			   		  }
-		 response.sendRedirect(confirmation);
-	 }
-	 catch(Exception e){
-	          e.printStackTrace();
-	      	   }
-   }   
+			 if(session != null) {
+				PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
+				prodPage = pageManager.create(parentPath, pageName, template, pageTitle);
+				Node pageNode = prodPage.adaptTo(Node.class);
+				Node jcrNode = null;
+				if (prodPage.hasContent()) {
+					jcrNode = prodPage.getContentResource().adaptTo(Node.class);
+				} else {                   
+					jcrNode = pageNode.addNode("jcr:content", "cq:PageContent");
+				} 
+				Node parNode = jcrNode.addNode("par");
+				parNode.setProperty("sling:resourceType", "foundation/components/parsys");
+				Node formNode = parNode.addNode("formdetails");
+				formNode.setProperty("sling:resourceType", "myproject/components/formdetails");
+				formNode.setProperty("FirstName", firstName);
+				formNode.setProperty("LastName", lastName);
+				formNode.setProperty("BirthDay", birthDay);
+				formNode.setProperty("EmailId", emailId);
+				formNode.setProperty("MobileNumber", mobileNumber);
+				formNode.setProperty("Gender", gender);
+				formNode.setProperty("Address", address);
+				formNode.setProperty("City", city);
+				formNode.setProperty("PinCode", pinCode);
+				formNode.setProperty("State", state);
+				formNode.setProperty("Country", country);
+				formNode.setProperty("HobbyDrawing", hobbyDrawing);
+				formNode.setProperty("HobbySinging", hobbySinging);
+				formNode.setProperty("HobbyDancing", hobbyDancing);
+				formNode.setProperty("HobbyCooking", hobbyCooking);
+				formNode.setProperty("ClassXBoard", classXBoard);
+				formNode.setProperty("ClassXPercentage", classXPercentage);
+				formNode.setProperty("ClassXYrOfPassing", classXYrOfPassing);
+				formNode.setProperty("ClassXIIBoard", classXIIBoard);
+				formNode.setProperty("ClassXIIPercentage", classXIIPercentage);
+				formNode.setProperty("ClassXIIYrOfPassing", classXIIYrOfPassing);
+				formNode.setProperty("GraduationBoard", graduationBoard);
+				formNode.setProperty("GraduationPercentage", graduationPercentage);
+				formNode.setProperty("GraduationYrOfPassing", graduationYrOfPassing);
+				formNode.setProperty("MastersBoard", mastersBoard);
+				formNode.setProperty("MastersPercentage", mastersPercentage);
+				formNode.setProperty("MastersYrOfPassing", mastersYrOfPassing);
+				formNode.setProperty("Course_BCA", courseBCA);
+				formNode.setProperty("Course_BCom", courseBCom);
+				formNode.setProperty("Course_BSc", courseBSc);
+				formNode.setProperty("Course_BA", courseBA);
+				session.save();
+				session.refresh(true);
+			}
+		} 
+		catch (Exception e){
+			e.printStackTrace();
+		}
+		response.sendRedirect(confirmation);
+	}
+	catch(Exception e){
+		e.printStackTrace();
+	}
+	}
 }
