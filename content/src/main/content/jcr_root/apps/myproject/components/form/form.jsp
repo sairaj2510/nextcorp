@@ -17,10 +17,11 @@
 
     <form action="/bin/form" method="POST">
         <table align="center" cellpadding="10">
-            <td><span>FIRST NAME</span></td>
-            <td>
-                <input type="text" name="First_Name" maxlength="30" />
-            </td>
+            <tr>
+            	<td><span>FIRST NAME</span></td>
+            	<td>
+                	<input type="text" name="First_Name" maxlength="30" />
+            	</td>
             </tr>
             <tr>
                 <td><span>LAST NAME</span></td>

@@ -1,0 +1,29 @@
+h3 {
+    font-family: Cambria;
+    font-size: 22pt;
+    font-style: normal;
+    font-weight: bold;
+    color:SlateBlue;
+    text-align: center;
+}
+table {
+    font-family: Calibri;
+    color:white;
+    font-size: 11pt;
+    font-style: normal;
+    text-align:;
+    background-color: white;
+    color: #000;
+    border-collapse: collapse;
+    border: 2px solid navy;
+}
+table.inner {
+    border: 0px
+}
+span{
+	font-family:san serif;
+}
+.cname{
+	color:red;
+	text-decoration: underline;
+}
