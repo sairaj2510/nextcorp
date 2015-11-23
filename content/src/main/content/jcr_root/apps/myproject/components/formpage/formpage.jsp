@@ -2,7 +2,7 @@
 
   formpage component.
 
-  
+
 
 --%><%
 %><%@include file="/libs/foundation/global.jsp"%><%
@@ -11,13 +11,16 @@
 				org.apache.sling.api.resource.ResourceResolver,
 				com.day.cq.wcm.api.Page,
 				com.day.cq.dam.api.Asset"
-%><%
+%>
+<body>
+<cq:include path="init" resourceType="wcm/core/components/init" />
+<%
 Node node = currentPage.getContentResource("par").adaptTo(Node.class);
 NodeIterator formNode = node.getNodes();
 while(formNode.hasNext()){
 Node formDetails = formNode.nextNode();
-String firstName = formDetails.getProperty("FirstName").getString();
-String lastName = formDetails.getProperty("LastName").getString();%>
+String firstName = properties.get("firstname",formDetails.getProperty("FirstName").getString());
+String lastName = properties.get("lastname",formDetails.getProperty("LastName").getString());%>
 <cq:includeClientLib categories="apps.formpage"/>
 <h3 align="center">INFORMATION OF <span class="cname"><%=firstName%> <%=lastName%></span></span> REGARDING STUDENT ENROLLMENT FORM</h3>
 <table align="center" cellpadding="10">
@@ -166,3 +169,4 @@ String lastName = formDetails.getProperty("LastName").getString();%>
 	</tr>
 </table>
 <%}%>
+</body>
