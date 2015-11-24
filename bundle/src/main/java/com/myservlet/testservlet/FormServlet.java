@@ -54,10 +54,8 @@ public class FormServlet extends SlingAllMethodsServlet
 					jcrNode = prodPage.getContentResource().adaptTo(Node.class);
 				} else {
 					jcrNode = pageNode.addNode("jcr:content", "cq:PageContent");
-				} 
-				Node parNode = jcrNode.addNode("par");
-				parNode.setProperty("sling:resourceType", "foundation/components/parsys");
-				Node formNode = parNode.addNode("formdetails");
+				}
+				Node formNode = jcrNode.addNode("formdetails");
 				formNode.setProperty("sling:resourceType", "myproject/components/formdetails");
 				formNode.setProperty("FirstName", firstName);
 				formNode.setProperty("LastName", lastName);
