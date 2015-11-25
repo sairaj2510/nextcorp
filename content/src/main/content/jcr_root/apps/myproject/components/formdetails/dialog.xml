@@ -13,59 +13,59 @@
                     <firstname
                         jcr:primaryType="cq:Widget"
                         fieldLabel="First Name"
-                        name="./firstname"
+                        name="./FirstName"
                         xtype="textfield"/>
                     <lastname
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Last Name"
-                        name="./lastname"
+                        name="./LastName"
                         xtype="textfield"/>
                     <birthday
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Date Of Birth"
-                        name="./birthday"
+                        name="./BirthDay"
                         xtype="textfield"/>
                     <emailid
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Email Id"
-                        name="./emailid"
+                        name="./EmailId"
                         xtype="textfield"/>
                     <mobilenumber
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Mobile Number"
-                        name="./mobilenumber"
+                        name="./MobileNumber"
                         xtype="textfield"/>
                     <gender
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Gender"
-                        name="./gender"
+                        name="./Gender"
                         type="select"
                         xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <male
                                 jcr:primaryType="nt:unstructured"
                                 text="Male"
-                                value="male"/>
+                                value="Male"/>
                             <female
                                 jcr:primaryType="nt:unstructured"
                                 text="Female"
-                                value="female"/>
+                                value="Female"/>
                         </options>
                     </gender>
                     <address
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Address"
-                        name="./address"
+                        name="./Address"
                         xtype="textfield"/>
                     <city
                         jcr:primaryType="cq:Widget"
                         fieldLabel="City"
-                        name="./city"
+                        name="./City"
                         xtype="textfield"/>
                     <pincode
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Pin Code"
-                        name="./pincode"
+                        name="./PinCode"
                         xtype="textfield"/>
                     <state
                         jcr:primaryType="cq:Widget"
@@ -75,72 +75,92 @@
                     <country
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Country"
-                        name="./country"
+                        name="./Country"
                         xtype="textfield"/>
-                    <classXboard
+                    <hobbydrawing
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel = "Drawing"
+                        name="./HobbyDrawing"
+                        xtype="textfield"/>
+                    <hobbysinging
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel = "Singing"
+                        name="./HobbySinging"
+                        xtype="textfield"/>
+                    <hobbydancing
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel = "Dancing"
+                        name="./HobbyDancing"
+                        xtype="textfield"/>
+                    <hobbycooking
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel = "Cooking"
+                        name="./HobbyCooking"
+                        xtype="textfield"/>
+                    <classXBoard
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXboard"
-                        name="./classXboard"
+                        name="./ClassXBoard"
                         xtype="textfield"/>
                     <classXPercentage
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXPercentage"
-                        name="./classXPercentage"
+                        name="./ClassXPercentage"
                         xtype="textfield"/>
                     <classXYrOfPassing
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXYrOfPassing"
-                        name="./classXYrOfPassing"
+                        name="./ClassXYrOfPassing"
                         xtype="textfield"/>
-                    <classXIIboard
+                    <classXIIBoard
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXIIboard"
-                        name="./classXIIboard"
+                        name="./ClassXIIBoard"
                         xtype="textfield"/>
                     <classXIIPercentage
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXIIPercentage"
-                        name="./classXIIPercentage"
+                        name="./ClassXIIPercentage"
                         xtype="textfield"/>
                     <classXIIYrOfPassing
                         jcr:primaryType="cq:Widget"
                         fieldLabel="ClassXIIYrOfPassing"
-                        name="./classXIIYrOfPassing"
+                        name="./ClassXIIYrOfPassing"
                         xtype="textfield"/>
-                    <graduationboard
+                    <graduationBoard
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Graduationboard"
-                        name="./graduationboard"
+                        name="./GraduationBoard"
                         xtype="textfield"/>
                     <graduationPercentage
                         jcr:primaryType="cq:Widget"
                         fieldLabel="GraduationPercentage"
-                        name="./graduationPercentage"
+                        name="./GraduationPercentage"
                         xtype="textfield"/>
                     <graduationYrOfPassing
                         jcr:primaryType="cq:Widget"
                         fieldLabel="GraduationYrOfPassing"
-                        name="./graduationYrOfPassing"
+                        name="./GraduationYrOfPassing"
                         xtype="textfield"/>
-                    <mastersboard
+                    <mastersBoard
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Mastersboard"
-                        name="./mastersboard"
+                        name="./MastersBoard"
                         xtype="textfield"/>
                     <mastersPercentage
                         jcr:primaryType="cq:Widget"
                         fieldLabel="MastersPercentage"
-                        name="./mastersPercentage"
+                        name="./MastersPercentage"
                         xtype="textfield"/>
                     <mastersYrOfPassing
                         jcr:primaryType="cq:Widget"
                         fieldLabel="MastersYrOfPassing"
-                        name="./mastersYrOfPassing"
+                        name="./MastersYrOfPassing"
                         xtype="textfield"/>
                     <coursesappliedfor
                         jcr:primaryType="cq:Widget"
                         fieldLabel="Courses Applied For"
-                        name="./coursesappliedfor"
+                        name="./CourseAppliedFor"
                         type="select"
                         xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
@@ -150,16 +170,16 @@
                                 value="BCA"/>
                             <courseBCom
                                 jcr:primaryType="nt:unstructured"
-                                text="BCom"
-                                value="BCom"/>
+                                text="B.Com"
+                                value="B.Com"/>
                             <courseBSc
                                 jcr:primaryType="nt:unstructured"
-                                text="BSc"
-                                value="BSc"/>
+                                text="B.Sc"
+                                value="B.Sc"/>
                             <courseBA
                                 jcr:primaryType="nt:unstructured"
-                                text="BA"
-                                value="BA"/>
+                                text="B.A"
+                                value="B.A"/>
                         </options>
                     </coursesappliedfor>
                 </items>

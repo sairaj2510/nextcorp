@@ -30,7 +30,7 @@ public class FormServlet extends SlingAllMethodsServlet
 	try{	
 		 String firstName = request.getParameter("First_Name");
 		 String lastName = request.getParameter("Last_Name");
-		 String parentPath="/content/usergenerated/content";
+		 String parentPath="/content/usergenerated/nextcorpcontent";
 		 Date date= new Date();
 		 Timestamp time = new Timestamp(date.getTime());
 		 String timeStamp = time.toString();
@@ -70,7 +70,8 @@ public class FormServlet extends SlingAllMethodsServlet
 				formNode.setProperty("Country", request.getParameter("Country"));
 				formNode.setProperty("HobbyDrawing", request.getParameter("Hobby_Drawing"));
 				formNode.setProperty("HobbySinging", request.getParameter("Hobby_Singing"));
-				formNode.setProperty("HobbyDancing", request.getParameter("Hobby_Cooking"));
+				formNode.setProperty("HobbyDancing", request.getParameter("Hobby_Dancing"));
+				formNode.setProperty("HobbyCooking", request.getParameter("Hobby_Cooking"));
 				formNode.setProperty("ClassXBoard", request.getParameter("ClassX_Board"));
 				formNode.setProperty("ClassXPercentage", request.getParameter("ClassX_Percentage"));
 				formNode.setProperty("ClassXYrOfPassing", request.getParameter("ClassX_YrOfPassing"));
@@ -83,10 +84,7 @@ public class FormServlet extends SlingAllMethodsServlet
 				formNode.setProperty("MastersBoard", request.getParameter("Masters_Board"));
 				formNode.setProperty("MastersPercentage", request.getParameter("Masters_Percentage"));
 				formNode.setProperty("MastersYrOfPassing", request.getParameter("Masters_YrOfPassing"));
-				formNode.setProperty("Course_BCA", request.getParameter("Course_BCA"));
-				formNode.setProperty("Course_BCom", request.getParameter("Course_BCom"));
-				formNode.setProperty("Course_BSc", request.getParameter("Course_BSc"));
-				formNode.setProperty("Course_BA", request.getParameter("Course_BA"));
+				formNode.setProperty("CourseAppliedFor", request.getParameter("Course"));
 				session.save();
 				session.refresh(true);
 			}

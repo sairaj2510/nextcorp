@@ -185,13 +185,13 @@
                 </td>
             </tr>
             <tr>
-                <td><span>COURSES
+                <td><span>COURSE
                     <br />APPLIED FOR</span></td>
                 <td>
-                	<span>BCA</span><input type="radio" name="Course_BCA" value="BCA">
-                	<span>B.Com</span><input type="radio" name="Course_BCom" value="B.Com">
-                	<span>B.Sc</span><input type="radio" name="Course_BSc" value="B.Sc">
-                	<span>B.A</span><input type="radio" name="Course_BA" value="B.A">
+                	<span>BCA</span><input type="radio" name="Course" value="BCA">
+                	<span>B.Com</span><input type="radio" name="Course" value="B.Com">
+                	<span>B.Sc</span><input type="radio" name="Course" value="B.Sc">
+                	<span>B.A</span><input type="radio" name="Course" value="B.A">
                 </td>
             </tr>
             <tr>

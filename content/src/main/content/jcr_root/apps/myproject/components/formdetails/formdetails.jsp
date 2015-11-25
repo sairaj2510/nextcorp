@@ -12,9 +12,35 @@
 				com.day.cq.wcm.api.Page,
 				com.day.cq.dam.api.Asset"%>
 <%
-
-String firstName = currentNode.getProperty("FirstName").getString();
-String lastName = currentNode.getProperty("LastName").getString();%>
+String firstName = properties.get("FirstName","");
+String lastName = properties.get("LastName","");
+String birthDay = properties.get("BirthDay","");
+String emailId = properties.get("EmailId","");
+String mobileNumber = properties.get("MobileNumber","");
+String gender = properties.get("Gender","");
+String address = properties.get("Address","");
+String city = properties.get("City","");
+String pinCode = properties.get("PinCode","");
+String state = properties.get("State","");
+String country = properties.get("Country","");
+String hobbyDrawing = properties.get("HobbyDrawing","");
+String hobbySinging = properties.get("HobbySinging","");
+String hobbyDancing = properties.get("HobbyDancing","");
+String hobbyCooking = properties.get("HobbyCooking","");
+String classXBoard= properties.get("ClassXBoard","");
+String classXPercentage = properties.get("ClassXPercentage","");
+String classXYrOfPassing = properties.get("ClassXYrOfPassing","");
+String classXIIBoard = properties.get("ClassXIIBoard","");
+String classXIIPercentage = properties.get("ClassXIIPercentage","");
+String classXIIYrOfPassing = properties.get("ClassXIIYrOfPassing","");
+String graduationBoard = properties.get("GraduationBoard","");
+String graduationPercentage = properties.get("GraduationPercentage","");
+String graduationYrOfPassing = properties.get("GraduationYrOfPassing","");
+String mastersBoard = properties.get("MastersBoard","");
+String mastersPercentage = properties.get("MastersPercentage","");
+String mastersYrOfPassing = properties.get("MastersYrOfPassing","");
+String coursesappliedfor = properties.get("CourseAppliedFor",""); 
+%>
 <cq:includeClientLib categories="apps.formdetails"/>
 <h3 align="center">INFORMATION OF <span class="cname"><%=firstName%> <%=lastName%></span></span> REGARDING STUDENT ENROLLMENT FORM</h3>
 <table align="center" cellpadding="10">
@@ -33,25 +59,25 @@ String lastName = currentNode.getProperty("LastName").getString();%>
 	<tr>
 		<td><span>DATE OF BIRTH</span></td>
 		<td>
-			<%=currentNode.getProperty("BirthDay").getString()%>
+			<%=birthDay%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>EMAIL ID</span></td>
 		<td>
-			<%=currentNode.getProperty("EmailId").getString()%>
+			<%=emailId%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>MOBILE NUMBER</span></td>
 		<td>
-			<%=currentNode.getProperty("MobileNumber").getString()%>
+			<%=mobileNumber%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>GENDER</span></td>
 		<td>
-			<%if (currentNode.hasProperty("Gender")){%><%=currentNode.getProperty("Gender").getString()%><%}%>
+			<%=gender%>
 		</td>
 	</tr>
 	<tr>
@@ -61,31 +87,31 @@ String lastName = currentNode.getProperty("LastName").getString();%>
 		<br />
 		</td>
  		<td>
-			<%=currentNode.getProperty("Address").getString()%>
+			<%=address%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>CITY</span></td>
 		<td>
-			<%=currentNode.getProperty("City").getString()%>
+			<%=city%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>PIN CODE</span></td>
 		<td>
-			<%=currentNode.getProperty("PinCode").getString()%>
+			<%=pinCode%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>STATE</span></td>
 		<td>
-			<%=currentNode.getProperty("State").getString()%>
+			<%=state%>
 		</td>
 	</tr>
 	<tr>
 		<td><span>COUNTRY</span></td>
 		<td>
-			<%=currentNode.getProperty("Country").getString()%>
+			<%=country%>
 		</td>
 	</tr>
 	<tr>
@@ -95,10 +121,10 @@ String lastName = currentNode.getProperty("LastName").getString();%>
 		<br />
 		</td>
 		<td>
-			<%if (currentNode.hasProperty("HobbyDrawing")){%><%=currentNode.getProperty("HobbyDrawing").getString()%><%}%>
-			<%if (currentNode.hasProperty("HobbySinging")){%><%=currentNode.getProperty("HobbySinging").getString()%><%}%>
-			<%if (currentNode.hasProperty("HobbyDancing")){%><%=currentNode.getProperty("HobbyDancing").getString()%><%}%>
-			<%if (currentNode.hasProperty("HobbyCooking")){%><%=currentNode.getProperty("HobbyCooking").getString()%><%}%>
+			<%=hobbyDrawing%>
+			<%=hobbySinging%>
+			<%=hobbyDancing%>
+			<%=hobbyCooking%>
 		</td>
 	</tr>
 	<tr>
@@ -123,30 +149,30 @@ String lastName = currentNode.getProperty("LastName").getString();%>
 				<tr>
 					<td><span>1</span></td>
 					<td><span>Class X</span></td>
-					<td><%=currentNode.getProperty("ClassXBoard").getString()%></td>
-					<td><%=currentNode.getProperty("ClassXPercentage").getString()%></td>
-					<td><%=currentNode.getProperty("ClassXYrOfPassing").getString()%></td>
+					<td><%=classXBoard%></td>
+					<td><%=classXPercentage%></td>
+					<td><%=classXYrOfPassing%></td>
 				</tr>
 				<tr>
 					<td><span>2</span></td>
 					<td><span>Class XII</span></td>
-					<td><%=currentNode.getProperty("ClassXIIBoard").getString()%></td>
-					<td><%=currentNode.getProperty("ClassXIIPercentage").getString()%></td>
-					<td><%=currentNode.getProperty("ClassXIIYrOfPassing").getString()%></td>
+					<td><%=classXIIBoard%></td>
+					<td><%=classXIIPercentage%></td>
+					<td><%=classXIIYrOfPassing%></td>
 				</tr>
 				<tr>
 					<td><span>3</span></td>
 					<td><span>Graduation</span></td>
-					<td><%=currentNode.getProperty("GraduationBoard").getString()%></td>
-					<td><%=currentNode.getProperty("GraduationPercentage").getString()%></td>
-					<td><%=currentNode.getProperty("GraduationYrOfPassing").getString()%></td>
+					<td><%=graduationBoard%></td>
+					<td><%=graduationPercentage%></td>
+					<td><%=graduationYrOfPassing%></td>
 				</tr>
 				<tr>
 					<td><span>4</span></td>
 					<td><span>Masters</span></td>
-					<td><%=currentNode.getProperty("MastersBoard").getString()%></td>
-					<td><%=currentNode.getProperty("MastersPercentage").getString()%></td>
-					<td><%=currentNode.getProperty("MastersYrOfPassing").getString()%></td>
+					<td><%=mastersBoard%></td>
+					<td><%=mastersPercentage%></td>
+					<td><%=mastersYrOfPassing%></td>
 				</tr>
 			</table>
 		</td>
@@ -155,10 +181,7 @@ String lastName = currentNode.getProperty("LastName").getString();%>
 		<td><span>COURSES
 			<br />APPLIED FOR</span></td>
 		<td>
-			<%if (currentNode.hasProperty("Course_BCA")){%><%=currentNode.getProperty("Course_BCA").getString()%><%}%>
-			<%if (currentNode.hasProperty("Course_BCom")){%><%=currentNode.getProperty("Course_BCom").getString()%><%}%>
-			<%if (currentNode.hasProperty("Course_BSc")){%><%=currentNode.getProperty("Course_BSc").getString()%><%}%>
-			<%if (currentNode.hasProperty("Course_BA")){%><%=currentNode.getProperty("Course_BA").getString()%><%}%>
+			<%=coursesappliedfor%>
 		</td>
 	</tr>
 </table>
