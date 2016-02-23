@@ -8,7 +8,20 @@
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
                 jcr:primaryType="cq:Panel"
-                title="Tab 1"/>
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <formheading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Form Heading"
+                        name="./formheading"
+                        xtype="textarea"/>
+                    <submittext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Submit Button text"
+                        name="./submittext"
+                        xtype="textfield"/>
+                </items>
+            </tab1>       
         </items>
     </items>
 </jcr:root>

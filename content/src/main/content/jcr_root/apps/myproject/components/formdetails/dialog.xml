@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <firstname
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="First Name"
+                        name="./FirstName"
+                        xtype="textfield"/>
+                    <lastname
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Last Name"
+                        name="./LastName"
+                        xtype="textfield"/>
+                    <company
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Date Of Birth"
+                        name="./Company"
+                        xtype="textfield"/>
+                    <email
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Email"
+                        name="./Email"
+                        xtype="textfield"/>
+                    <phone
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Mobile Number"
+                        name="./Phone"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

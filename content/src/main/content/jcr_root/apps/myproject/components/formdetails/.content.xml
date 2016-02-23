@@ -3,4 +3,4 @@
     jcr:description="form details"
     jcr:primaryType="cq:Component"
     jcr:title="Form Details"
-    componentGroup=".hidden"/>
+    componentGroup="My Project"/>
